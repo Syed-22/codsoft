@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url("Background.jpg");
+            background-size: cover;
+            position: relative;
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: sans-serif;
+            padding: 0 20px;
+        }
+        .logo{
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        .Menu a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 10px;
+            font-size: 16px;
+            position: relative;
+        }
+        .Register a{
+            text-decoration: none;
+            color: white;
+            padding: 10px 10px;
+            font-size: 16px;
+            background: orange;
+            border-radius: 5px;
+            transition: 0.4s linear;
+        }
+        .h-txt{
+            max-width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: white;
+        }
+        .h-txt span{
+            letter-spacing: 3px;
+        }
+        .h-txt h1{
+            font-size: 2.5em;
+        }
+        .h-txt a{
+            text-decoration: none;
+            background: orange;
+            color: white;
+            padding: 10px 20px;
+            letter-spacing: 3px;
+            transition: 0.4s linear;
+        }
+        .h-txt a:hover{
+            background: transparent;
+            border: 1px solid red;
+        }
+
+        /* Media Query for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .Menu a{
+                padding: 8px 5px;
+                font-size: 14px;
+            }
+            .Register a{
+                padding: 8px 5px;
+                font-size: 14px;
+            }
+            .h-txt{
+                max-width: 90%;
+            }
+            .h-txt h1{
+                font-size: 2em;
+            }
+            .h-txt a{
+                padding: 8px 15px;
+            }
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background color */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <b>QuickTickets</b>
+        </div>
+        <div class="Menu">
+            <a href="#"><b>Home</b></a>
+            <a href="#"><b>Flights</b></a>
+            <a href="#"><b>Hotels</b></a>
+            <a href="#"><b>Car Rentals</b></a>
+            <a href="#"><b>Special Offers</b></a>
+            <a href="#"><b>About Us</b></a>
+            <a href="#"><b>FAQ</b></a>
+        </div>
+        <div class="Register">
+            <a href="#">Sign In / Register</a>
+        </div>
+    </nav>
+    <section class="h-txt">
+        <span><b>Find and Book</b></span>
+        <h1><b>Your Tickets Online</b></h1>
+        <br>
+        <a href="#"><b>Start Booking Now</b></a>
+    </section>
+</header>
+<main>
+    <!-- Main content goes here -->
+</main>
+<footer>
+    <p>&copy; 2024 QuickTickets. All rights reserved.</p>
+</footer>
+</body>
+</html>

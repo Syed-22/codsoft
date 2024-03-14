@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .calculator {
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+        #out {
+            grid-column: 1 / -1;
+            padding: 15px;
+            font-size: 28px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: right;
+            background-color: #f9f9f9;
+        }
+        .btn {
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Button color */
+            color: #fff; /* Text color */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3; /* Button hover color */
+        }
+        .btn.clear {
+            background-color: #dc3545; /* Clear button color */
+        }
+        .btn.clear:hover {
+            background-color: #bd2130; /* Clear button hover color */
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <center><h1><b>Calculator</b></h1></center>
+        <div class="calculator">
+            <input type="text" name="text" id="out" readonly>
+            <input type="button" class="btn" onclick="add(7)" value="7">
+            <input type="button" class="btn" onclick="add(8)" value="8">
+            <input type="button" class="btn" onclick="add(9)" value="9">
+            <input type="button" class="btn" onclick="add('+')" value="+">
+            <input type="button" class="btn" onclick="add(4)" value="4">
+            <input type="button" class="btn" onclick="add(5)" value="5">
+            <input type="button" class="btn" onclick="add(6)" value="6">
+            <input type="button" class="btn" onclick="add('-')" value="-">
+            <input type="button" class="btn" onclick="add(1)" value="1">
+            <input type="button" class="btn" onclick="add(2)" value="2">
+            <input type="button" class="btn" onclick="add(3)" value="3">
+            <input type="button" class="btn" onclick="add('*')" value="X">
+            <input type="button" class="btn" onclick="add(0)" value="0">
+            <input type="button" class="btn" onclick="add('.')" value=".">
+            <input type="button" class="btn clear" onclick="clearDisplay()" value="Clear">
+            <input type="button" class="btn" onclick="cal()" value="=">
+        </div>
+    </div>
+    
+    <script>
+        function add(x){
+            document.getElementById("out").value += x; 
+        }
+        function cal(){
+            var output = document.getElementById("out").value;
+            var result = eval(output);
+            document.getElementById("out").value = result;
+        }
+        function clearDisplay() {
+            document.getElementById("out").value = '';
+        }
+    </script>
+</body>
+</html>
